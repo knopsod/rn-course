@@ -3,7 +3,6 @@ import { StyleSheet, View } from 'react-native';
 
 import PlaceInput from './src/components/PlaceInput/PlaceInput';
 import PlaceList from './src/components/PlaceList/PlaceList';
-import placeImage from './src/assets/yann.jpg';
 
 export default class App extends React.Component {
   state = {
@@ -16,7 +15,9 @@ export default class App extends React.Component {
         places: prevState.places.concat({ 
           key: Math.random(), 
           value: placeName,
-          image: placeImage
+          image: {
+            uri: 'https://c1.staticflickr.com/5/4096/4744241983_34023bf303_b.jpg'
+          }
         })
       };
     });
